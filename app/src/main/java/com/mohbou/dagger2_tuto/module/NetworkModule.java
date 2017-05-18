@@ -1,18 +1,12 @@
 package com.mohbou.dagger2_tuto.module;
 
 import android.content.Context;
-
-import com.mohbou.dagger2_tuto.network.YhooServiceAPI;
-
 import java.io.File;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import timber.log.Timber;
 
 @Module(includes=ContextModule.class)
