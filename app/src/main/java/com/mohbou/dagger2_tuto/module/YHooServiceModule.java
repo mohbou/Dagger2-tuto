@@ -1,6 +1,7 @@
 package com.mohbou.dagger2_tuto.module;
 
 import com.mohbou.dagger2_tuto.network.YhooServiceAPI;
+import com.mohbou.dagger2_tuto.scope.YHooServiceScope;
 
 import dagger.Module;
 import dagger.Provides;
@@ -12,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class YHooServiceModule {
     private static final String BASE_URL = "https://query.yahooapis.com/v1/public/";
     @Provides
+    @YHooServiceScope
     public YhooServiceAPI getYhooServiceAPI(Retrofit retrofit) {
         return retrofit.create(YhooServiceAPI.class);
     }
